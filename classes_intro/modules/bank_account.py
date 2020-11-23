@@ -10,8 +10,8 @@ class BankAccount:
         self.balance = balance
         #if python runs then it works, in this case ignore syntax highlighting
         self.type = type
-        # _ (underscore) makes dictionary hidden
-        self._rates = {
+        # __ (double underscore) makes instance variable hidden & uneditable
+        self.__rates = {
             'personal': 10,
             'business': 50
         }
@@ -22,7 +22,9 @@ class BankAccount:
 
     # [Task:] Make a pay_monthly_fee method, which reduces the value of the account by 50. Try calling it in `app.py`
     def pay_monthly_fee(self):
-        if self.type == 'business':
-            self.balance -= 50
-        else:
-            self.balance -= 10
+    #     if self.type == 'business':
+    #         self.balance -= 50
+    #     else:
+    #         self.balance -= 10
+    # --> refactor the above to use hidden instance variable instead of if / else
+        self.balance -= self.__rates[self.type]

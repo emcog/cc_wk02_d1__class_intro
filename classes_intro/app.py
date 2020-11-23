@@ -30,4 +30,4 @@ bank_account_02.pay_monthly_fee()
 print(bank_account_02.balance)
 
 # hack the dictonrary to add rates
-bank_account.rates['current'] = 500
+# bank_account.__rates['current'] = 20
