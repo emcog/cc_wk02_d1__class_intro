@@ -10,7 +10,8 @@ class BankAccount:
         self.balance = balance
         #if python runs then it works, in this case ignore syntax highlighting
         self.type = type
-        self.rates = {
+        # _ (underscore) makes dictionary hidden
+        self._rates = {
             'personal': 10,
             'business': 50
         }
