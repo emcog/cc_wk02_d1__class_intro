@@ -10,7 +10,7 @@ from modules.bank_account import *
 # print(get_account_name(account))
 
 # create instance of bank account class
-bank_account = BankAccount('John', 500, 'Business')
+bank_account = BankAccount('John', 500, 'business')
 print(bank_account.holder_name)
 
 
@@ -25,7 +25,9 @@ bank_account.pay_monthly_fee()
 print(bank_account.balance)
 
 
-bank_account_02 = BankAccount('Robin', 100, 'Personal')
+bank_account_02 = BankAccount('Robin', 100, 'personal')
 bank_account_02.pay_monthly_fee()
 print(bank_account_02.balance)
 
+# hack the dictonrary to add rates
+bank_account.rates['current'] = 500

@@ -10,6 +10,10 @@ class BankAccount:
         self.balance = balance
         #if python runs then it works, in this case ignore syntax highlighting
         self.type = type
+        self.rates = {
+            'personal': 10,
+            'business': 50
+        }
 
     # example behaviour in class
     def pay_in(self, amount):
@@ -17,7 +21,7 @@ class BankAccount:
 
     # [Task:] Make a pay_monthly_fee method, which reduces the value of the account by 50. Try calling it in `app.py`
     def pay_monthly_fee(self):
-        if self.type == 'Business':
+        if self.type == 'business':
             self.balance -= 50
         else:
             self.balance -= 10
