@@ -11,3 +11,4 @@ from modules.bank_account import *
 
 # create instance of bank account class
 bank_account = BankAccount('John', 500, 'Business')
+print(bank_account.holder_name)
