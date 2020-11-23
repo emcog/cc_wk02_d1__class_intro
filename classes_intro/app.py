@@ -23,3 +23,9 @@ print(bank_account.balance)
 
 bank_account.pay_monthly_fee()
 print(bank_account.balance)
+
+
+bank_account_02 = BankAccount('Robin', 100, 'Personal')
+bank_account_02.pay_monthly_fee()
+print(bank_account_02.balance)
+

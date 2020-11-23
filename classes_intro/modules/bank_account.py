@@ -16,6 +16,8 @@ class BankAccount:
         self.balance += amount
 
     # [Task:] Make a pay_monthly_fee method, which reduces the value of the account by 50. Try calling it in `app.py`
-
     def pay_monthly_fee(self):
-        self.balance -= 50
+        if self.type == 'Business':
+            self.balance -= 50
+        else:
+            self.balance -= 10
